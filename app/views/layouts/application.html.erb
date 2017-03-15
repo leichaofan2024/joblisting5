@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Joblisting5</title>
+    <title>Super购物网</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "common/navbar" %>
+    <div class="container-fluid" >
+      <%= yield %>
+    </div>
+    <%= render "common/footer" %>
   </body>
 </html>
