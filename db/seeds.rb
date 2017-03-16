@@ -7,6 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+puts "开始创建管理员账户"
+User.create!(:email => "leichaofan2024@gmail.com", :password => "123456", :password_confirmation => "123456",:is_admin => true)
+puts "管理员创建完成！"
+
+
 puts "开始创建工作。。。"
 for i in 1..10 do
   Job.create!(title: "第#{i}份工作", description: "我们有共同的梦想，有共同的追求，让我们一起奋斗吧，只差趣味相投的你！",

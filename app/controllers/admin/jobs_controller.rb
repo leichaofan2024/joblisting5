@@ -1,6 +1,6 @@
 class Admin::JobsController < ApplicationController
   before_action :authenticate_user!
-  # before_action :require_is_admin
+  before_action :require_is_admin
   layout "admin"
   def index
     @jobs = Job.all
@@ -33,9 +33,13 @@ class Admin::JobsController < ApplicationController
   def destroy
     @job = Job.find(params[:id])
     @job.destroy
-    redirect_to admin_jobs_path, warning: "已成功删除！"
+    redirect_to admin_jobs_path, notice: "已成功删除！"
   end
-
+  def require_is_admin
+    if !current_user.admin?
+       redirect_to jobs_path,alert: "你不是管理员，休要进来!"
+    end
+  end
   private
 
   def job_params
