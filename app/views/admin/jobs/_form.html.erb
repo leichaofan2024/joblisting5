@@ -1,0 +1,8 @@
+<%= simple_form_for [:admin,@job] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :wage_lower_bound %>
+  <%= f.input :wage_upper_bound %>
+  <%= f.input :content %>
+  <%= f.submit "Submit", disable_with: "Submiting..." %>
+<% end %>
