@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :resuems
   def admin?
     is_admin
-  end  
+  end
 end

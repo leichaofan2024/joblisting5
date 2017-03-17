@@ -1,7 +1,11 @@
 <div class="col-md-10">
+  <div class="pull-right">
+    <%= link_to("新增", new_admin_job_path, :class => "btn btn-info")%>
+  </div>
   <table class="table table-bolder">
     <thead>
       <tr>
+        <th>状态</th>
         <th>职缺</th>
         <th>收到简历数量</th>
         <th>薪资下限</th>
