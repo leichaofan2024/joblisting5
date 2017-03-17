@@ -1,4 +1,8 @@
+<div class="col-md-10">
 <h2> <%= @job.title %> - 履历列表</h2>
 
 <hr>
+<p>
 <%= render :partial => "resume", :collection => @resumes, :as => :resume %>
+</p>
+</div>
