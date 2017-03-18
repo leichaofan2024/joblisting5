@@ -2,10 +2,17 @@ class JobsController < ApplicationController
 
   def index
     @jobs = case params[:order]
-    when "by wage_lower_bound"
+    when "by wage_lower_bound_DESC"
       Job.published.order("wage_lower_bound DESC")
-    when "by wage_upper_bound"
+    when "by_wage_lower_bound_ASC"
+      JOb.published.order("wage_lower_bound ASC")
+
+    when "by wage_upper_bound_DESC"
       Job.published.order("wage_upper_bound DESC")
+    when "by wage_upper_bound_ASC"
+      Job.published.order("wage_upper_bound ASC")
+    when "by created_at_DESC"
+      Job.published.recent
     else
       Job.published.recent
     end

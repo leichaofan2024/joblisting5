@@ -1,14 +1,16 @@
+<div class="col-md-10">
 <table class="table table-boldered">
   <thead>
     <tr>
       <th>职缺</th>
-      <th>薪资下限<%= link_to("", jobs_path(:order => "by wage_lower_bound"), class: "fa fa-arrow-down fa-lg", style: "color:rgba(2,119,189 ,1); padding-left:10px;text-decoration:none;")%></th>
-      <th>薪资上限<%= link_to("", jobs_path(:order => "by wage_upper_bound"), class: "fa fa-arrow-down fa-lg", style: "color:rgba(2,119,189 ,1); padding-left:10px;text-decoration:none;")%></th>
+      <th>薪资下限</th>
+      <th>薪资上限</th>
       <th>联系方式</th>
-      <th>发布时间<%= link_to("", jobs_path, class: "fa fa-arrow-down fa-lg", style: "color:rgba(2,119,189 ,1); padding-left:10px;text-decoration:none;")%></th>
+      <th>发布时间<</th>
     </tr>
   </thead>
   <tbody>
-    <%= render :partial => "jobs/jobitem", :collection => @jobs, :as => :job %>
+    <%= render :partial => "jobitem", :collection => @jobs, :as => :job %>
   </tbody>
 </table>
+</div>

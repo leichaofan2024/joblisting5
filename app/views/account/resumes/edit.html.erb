@@ -1,0 +1,7 @@
+<div class="col-md-8">
+  <%= simple_form_for [@job,@resume] do |f| %>
+    <%= f.input :content %> 
+    <%= f.input :attachment %>
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>

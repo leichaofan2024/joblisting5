@@ -1,0 +1,16 @@
+
+
+<div class="col-md-10">
+    <h3 class="text-center"><%= @job.title %></h3>
+    <hr>
+    <p class="text-center"><%= @job.description %></p>
+    <hr>
+    <p>薪资：<%= @job.wage_lower_bound %>~<%= @job.wage_upper_bound %></p>
+    <br>
+    <br>
+    <p>联系方式： <%= @job.contact_email %> </p>
+
+</div>
+<div class="col-md-2" style="position:absolute;top:120px;left:18px">
+  <%= link_to("简历预览", account_job_resumes_path(@job,@resumes),class: "btn btn-default") %>
+</div>
