@@ -10,6 +10,6 @@
   <td><%= link_to(job.resumes.count, admin_job_resumes_path(job)) %></td>
   <td><%= job.wage_lower_bound %></td>
   <td><%= job.wage_upper_bound %></td>
-  <td><%= link_to("Delete", admin_job_path(job), method: :delete, data: { :confirm => "Are you sue?"}, class: "btn btn-default") %></td>
+  <td><%= link_to("Delete", admin_job_path(job), method: :delete, data: { :confirm => "Are you sue?"}, class: "btn btn-danger") %></td>
   <td><%= job.created_at %></td>
 </tr>

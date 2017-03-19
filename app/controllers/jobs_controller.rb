@@ -12,7 +12,7 @@ class JobsController < ApplicationController
     when "by wage_upper_bound_ASC"
       Job.published.order("wage_upper_bound ASC")
     when "by created_at_DESC"
-      Job.published.recent
+      Job.published.order("created_at ASC")
     else
       Job.published.recent
     end
